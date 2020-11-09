@@ -1,0 +1,550 @@
+@font-face {
+  font-family: "rale";
+  src: url("./assets/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: "Calm";
+  src: url("./assets/KeepCalm-Medium.ttf");
+}
+
+$Blue: rgb(0, 42, 59);
+$Coral: rgba(235, 76, 76, 1);
+
+.button {
+  background-color: $Coral !important;
+  color: white !important;
+  font-family: "rale" !important;
+  border: none !important;
+}
+
+.button:focus {
+  background-color: $Coral !important;
+  color: white !important;
+  font-family: "rale" !important;
+  border: none !important;
+}
+
+body {
+  font-family: "rale" !important;
+  color: $Blue !important;
+}
+
+.button:hover {
+  color: $Coral !important;
+  background-color: white !important;
+  border-color: $Coral !important;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.blue {
+  background-color: $Blue !important;
+}
+
+.blue:focus {
+  background-color: $Blue !important;
+  border: none;
+  color: white !important;
+}
+
+.blue:hover {
+  color: $Blue;
+  border: 1px $Blue solid;
+}
+
+h1 {
+  font-family: "Calm";
+  font-size: 40px;
+  color: $Blue;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Calm";
+  font-size: 20px;
+  color: $Blue;
+}
+
+.upload-image {
+  max-height: 100px;
+}
+
+small.is-danger {
+  color: $Coral !important;
+}
+
+input.is-danger {
+  border: $Coral 1px solid !important;
+}
+
+label.is-danger {
+  border: $Coral 1px solid !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space {
+  margin-right: 10px;
+}
+
+//navbar
+.navbar {
+  background-color: $Blue !important;
+  .navbar-brand {
+    .navbar-logo {
+      min-width: 50px;
+      min-height: 50px;
+      margin-left: 10px;
+    }
+    .coral {
+      background-color: $Coral;
+    }
+  }
+  .navbar-menu {
+    background-color: $Blue;
+    .navbar-end {
+      .navbar-item {
+        font-size: 25px;
+      }
+      .navbar-item:hover {
+        color: $Coral !important;
+      }
+    }
+  }
+}
+
+//login
+.login {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  // .card {
+  form {
+    .oneline {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .label {
+        margin-right: 20px;
+      }
+    }
+    img {
+      max-height: 250px;
+      padding: 50px;
+    }
+    .button {
+      margin-top: 20px;
+    }
+  }
+  .reg {
+    margin: 20px 0;
+  }
+  // }
+}
+
+.register {
+  height: 100vh;
+  background-image: url("./images/Wordee-writing.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .card {
+    form {
+      .oneline {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .label {
+          margin-right: 20px;
+        }
+      }
+      img {
+        max-height: 200px;
+        padding: 30px;
+      }
+    }
+    .log {
+      margin: 20px 0;
+    }
+  }
+}
+
+.sect {
+  padding-left: 20px;
+}
+
+.brandprofile {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  .left-side {
+    width: 80%;
+    margin-right: 20px;
+    .branding {
+      display: flex;
+      flex-direction: column;
+      .user-cover {
+        display: flex;
+        color: $Blue;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        background-position: center;
+        background-color: rgb(212, 212, 212);
+        .edit {
+          cursor: pointer;
+          position: absolute;
+          left: 33px;
+          top: 83px;
+        }
+        img {
+          object-fit: cover;
+        }
+      }
+      .empty {
+        display: flex;
+        align-items: center;
+      }
+      .profile-logo {
+        background-color: white;
+        border-radius: 10px;
+        max-width: 250px;
+        padding: 20px 20px 0 20px;
+        margin-top: -50px;
+      }
+      .logo-circle {
+        border: 2px $Blue solid;
+        border-radius: 50%;
+        max-width: 200px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $Blue;
+      }
+      .logo {
+        cursor: pointer;
+      }
+      .position-bottom {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    .multiple-images {
+      border: 2px $Coral dashed;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+    }
+    .brand-imagery {
+      max-width: 200px;
+      max-height: 100px;
+      margin: 5px;
+    }
+    .documents {
+      display: flex;
+      flex-wrap: wrap;
+      .docs {
+        font-size: 10px;
+        display: flex;
+        width: 150px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        .file-imagery {
+          max-width: 110px;
+          min-width: 110px;
+          cursor: pointer;
+        }
+      }
+    }
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      margin: 20px 0;
+      font-size: 17px;
+      font-weight: bolder;
+    }
+    .no-image {
+      color: $Blue;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px $Blue dashed;
+        width: 280px;
+        height: 150px;
+        margin: 20px 0;
+      }
+    }
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .image-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .brand-imagery {
+        max-width: 200px;
+        max-height: 100px;
+        margin: 0 5px 5px 5px;
+        height: 100px;
+      }
+      .delete {
+        position: absolute;
+        right: -4px;
+        top: -4px;
+      }
+    }
+  }
+  .file-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    .image-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 5px 5px 5px;
+      .brand-files {
+        max-width: 200px;
+        max-height: 100px;
+        height: 100px;
+      }
+      .delete {
+        position: absolute;
+        right: -4px;
+        top: -4px;
+      }
+    }
+  }
+  .right-side {
+    margin-left: 20px;
+    .lists {
+      color: $Coral;
+      margin-left: 15px;
+      .bluetext {
+        color: $Blue;
+      }
+    }
+    .link {
+      color: $Coral;
+    }
+  }
+}
+
+.editprofile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+  .space {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    .image-input {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .remove {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+
+.editbrief {
+  .remove {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.brief {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brief-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .field {
+    .underline {
+      border-bottom: 1px solid rgb(235, 235, 235);
+      margin: 20px 0;
+    }
+    .button-control {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .is-danger {
+        border-radius: 11px;
+        border: 1px solid hsl(348, 100%, 61%);
+      }
+      input[type="radio"] {
+        opacity: 0;
+        width: 0;
+        position: fixed;
+      }
+      input[type="radio"]:checked ~ * {
+        background-color: $Coral;
+      }
+      input[type="radio"]:hover ~ * {
+        background-color: $Coral;
+      }
+      label {
+        border-radius: 10px;
+        // background-color: none;
+        margin: 10px 0;
+      }
+      label span {
+        height: 60px;
+        width: 60px;
+        font-family: Calm;
+        text-align: center;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(235, 235, 235);
+        color: $Blue;
+        cursor: pointer;
+        justify-content: center;
+        padding: 12px;
+        -webkit-box-shadow: 0px 0px 10px -6px rgba(161, 161, 161, 1);
+        -moz-box-shadow: 0px 0px 10px -6px rgba(161, 161, 161, 1);
+        box-shadow: 0px 0px 10px -6px rgba(161, 161, 161, 1);
+      }
+
+      .wide {
+        width: 100px;
+        font-family: Calm;
+        text-align: center;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(235, 235, 235);
+        color: $Blue;
+        cursor: pointer;
+        justify-content: center;
+      }
+    }
+    .space {
+      margin: 10px 0;
+    }
+  }
+  .width {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.larger {
+  margin: 20px 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.createbrief {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.editbrief {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  flex-direction: column;
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.backend {
+  padding: 20px;
+  .brands {
+    .accordionlogo {
+      max-height: 50px;
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .accordionImage {
+      max-height: 50px;
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .accordionTitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .backend-folder {
+      max-height: 100px;
+      max-width: 100px;
+    }
+    .padding {
+      padding-left: 30px;
+    }
+  }
+  .search {
+    margin: 20px 0;
+  }
+}
+
+.hero-body-failed {
+  background-color: $Blue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $Coral;
+  text-align: center;
+  font-size: 100px;
+}
