@@ -117,11 +117,13 @@ We would like to be alerted by email if a user updates their information or edit
 <br>
 <h3>Redux</h3>
 This was my first full build of Redux. I didn't find it too difficult to understand the concepts and intergrate with middleware. I didn't realise it would be so easy to use the dispatch to update the input values. I really like it now though and will continue to use it.
+
 ```
 onChange={({ target: { name, value } }) =>
   dispatch(addUserInfo({ ...user, [name]: value }))
 }/>
 ```
+
 <br>
 <br>
 <h3>Design</h3>
