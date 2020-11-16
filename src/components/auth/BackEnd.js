@@ -174,10 +174,6 @@ const BackEnd = () => {
                             </>
                             : null}
                           <tr>
-                            <th>Description of purpose in a sentance:</th>
-                            <td>{brief.sentance}</td>
-                          </tr>
-                          <tr>
                             <th>Message the audience should leave with:</th>
                             <td>{brief.message}</td>
                           </tr>

@@ -1,6 +1,6 @@
 import propTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import axios from 'axios' 
 import { getToken, getUser } from '../lib/auth'
 import BriefForm from './BriefForm'
 import Navbar from '../common/Navbar'
@@ -23,7 +23,6 @@ const BrandEditBrief = ({
           headers: { Authorization: `Bearer ${getToken()}` }
         })
         if (res.data.purpose === 'Sell a product or service') setExtraQuestions(true)
-        console.log(res.data)
         setData(res.data)
       } catch (err) {
         console.log(err)

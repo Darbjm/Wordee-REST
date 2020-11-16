@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../../redux/user/userActions'
 // import { fetchUsers } from '../redux'
 import { getToken, getUser, logout } from '../lib/auth'
@@ -19,8 +19,9 @@ const Profile = ({
     params: { id }
   }
 }) => {
-  const [user, setUser] = useState({})
+  // const [user, setUser] = useState({})
   const [success, setSuccess] = useState(false)
+  const user = useSelector(state => state.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const Profile = ({
       const res = await axios.get(`/api/brands/${id}`, {
         headers: { Authorization: `Bearer ${getToken()}` }
       })
-      setUser(res.data)
+      // setUser(res.data)
       dispatch(addUser(res.data))
     } catch (err) {
       console.log(err)
@@ -99,7 +100,7 @@ const Profile = ({
                 placeholder="Brandname"
                 name="username"
                 onChange={({ target: { name, value } }) =>
-                  setUser({ ...user, [name]: value })
+                  dispatch(addUser({ ...user, [name]: value }))
                 }/> 
               <br/>
               <h2 style={{ display: 'inline' }}>Email:</h2> 
@@ -109,7 +110,7 @@ const Profile = ({
                 placeholder="Email"
                 name="email"
                 onChange={({ target: { name, value } }) =>
-                  setUser({ ...user, [name]: value })
+                  dispatch(addUser({ ...user, [name]: value }))
                 }/> 
               <br/>
               <h2 style={{ display: 'inline' }}>Website:</h2> 
@@ -119,7 +120,7 @@ const Profile = ({
                 placeholder="Website"
                 name="website"
                 onChange={({ target: { name, value } }) =>
-                  setUser({ ...user, [name]: value })
+                  dispatch(addUser({ ...user, [name]: value }))
                 }/> 
               <br/>
               <h2 style={{ display: 'inline' }}>Blog/refernce url:</h2> 
@@ -129,7 +130,7 @@ const Profile = ({
                 placeholder="Blog/refernce url"
                 name="blog"
                 onChange={({ target: { name, value } }) =>
-                  setUser({ ...user, [name]: value })
+                  dispatch(addUser({ ...user, [name]: value }))
                 } 
               />
               <br/>
@@ -147,7 +148,7 @@ const Profile = ({
                 rows="16"
                 name="summary"
                 onChange={({ target: { name, value } }) =>
-                  setUser({ ...user, [name]: value })
+                  dispatch(addUser({ ...user, [name]: value }))
                 }
               />
               <button type='submit' style={{ marginRight: '10px' }} className="button is-small blue is-rounded">Save</button>
