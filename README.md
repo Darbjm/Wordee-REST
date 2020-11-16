@@ -1,6 +1,6 @@
 # <img src='src/styles/images/Wordee_logo.svg' width='400'>
 
-<h1>Freelance Project: Wordee</h1>
+<h1>Freelance Project: Wordee !!REST API VERSION!!</h1>
  
 <h2>Problem: Brands find the process of creating, and sending briefs to copywriters with up to date brand files slow and complicated.</h2>
  
@@ -35,7 +35,6 @@ The login details are email: test@email password: pass <br>
  
 <h2 name='tech'>Technologies used and why?</h2>
  
-I used <strong>GraphQL</strong> to reduce the amount of work the server had to do to reduce latency.<br>
 I used <strong>Heroku</strong> because it comes ready to use with very little configuration compared to AWS. If the project scales, I will change to AWS due to price concerns.<br>
 I used <strong>Firebox</strong> because like Heroku its a quick and simple setup to manage files and allows others to access those files via URL.<br>
 I used <strong>CircleCI</strong> because I wanted to know every branch was being tested.<br>
@@ -45,7 +44,7 @@ I used <strong>React</strong> because needed the brief form to be able to react 
 2. SCSS & Bulma <br>
 3. JavaScript (ES6) <br>
 4. Redux <br>
-5. GraphQL <br>
+5. REST <br>
 6. Mocha <br>
 7. Chai <br>
 8. Express <br>
@@ -116,12 +115,13 @@ We would like to be alerted by email if a user updates their information or edit
 [TRIP DRINKS](https://www.drink-trip.com/) Tested our app and found it very useful saying it was functional and well designed. TRIP is still using it and we are arranging user testing.
 <br>
 <br>
-<h3>GaphQL</h3>
- 
-<br>
-<br>
 <h3>Redux</h3>
- 
+This was my first full build of Redux. I didn't find it too difficult to understand the concepts and intergrate with middleware. I didn't realise it would be so easy to use the dispatch to update the input values. I really like it now though and will continue to use it.
+```
+onChange={({ target: { name, value } }) =>
+  dispatch(addUserInfo({ ...user, [name]: value }))
+}/>
+```
 <br>
 <br>
 <h3>Design</h3>
